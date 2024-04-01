@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>2019101008한준희 5주차 과제</title>
+    <script type="text/javascript">
+      window.onload = function(){
+        var width_size = window.outerWidth;
+        if(width_size < 800){
+          alert("800px 이상에서만 작동.")
+        }
+      }
+    </script>
+    <style>
+      @keyframes moveUpDown {
+        0% {
+          transform: translateY(-70%);
+        }
+        25% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(70%);
+        }
+        75% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(-70%);
+        }
+      }
+
+      @keyframes moveReverseUpDown {
+        0% {
+          transform: translateY(70%);
+        }
+        25% {
+          transform: translateY(0);
+        }
+        50% {
+          transform: translateY(-70%);
+        }
+        75% {
+          transform: translateY(0);
+        }
+        100% {
+          transform: translateY(70%);
+        }
+      }
+
+      @keyframes moveRightAndBack {
+        0% {
+          transform: translateX(0);
+        }
+        50% {
+          transform: translateX(calc(100vw - 100px));
+        }
+        100% {
+          transform: translateX(0);
+        }
+      }
+
+      @keyframes fadeIn{
+        0%{
+          opacity: 0;
+        }
+        100%{
+          opacity: 1;
+        }
+      }
+
+      h1 {
+        font-size: 45px;
+        text-align: center;
+        margin: 0px;
+        padding: 20px;
+        align-items: center;
+      }
+
+      a{
+        text-decoration: none;
+        color: aqua;
+      }
+
+      .inline-grid{
+        list-style-type: none;
+        text-align: center;
+      }
+
+      #HO{
+        color: green;
+      }
+
+      #MK{
+        animation: moveUpDown;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+      }
+
+      #SP{
+        animation: moveReverseUpDown;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        color: orange;
+      }
+
+      #MS{
+        animation: moveUpDown;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        color: blue;
+      }
+
+      #JP{
+        animation: moveReverseUpDown;
+        animation-duration: 0.5s;
+        animation-iteration-count: infinite;
+        color: yellow;
+      }
+
+      .listFade{
+        animation: fadeIn 6s;
+      }
+      
+      .con {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .menu-bar__menu-box-1 > ul > li {
+        display: inline-block;
+      }
+      
+      .menu-bar__menu-box-1 > ul {
+        text-align: center;
+      }
+      
+      .logo-bar > div {
+        text-align: center;
+      }
+    
+      body {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+      }
+      
+      @media (min-width: 800px) {
+        .con-min-width {
+        min-width: 800px;
+        padding: 0 10px;
+        border-bottom: 1px solid gray;
+        }
+
+        .con {
+        width: 700px;
+        border-bottom: 1px solid gray;
+        }
+
+        .menu-bar__menu-box-1 > ol > li {
+          display: inline-block;
+        }
+
+        .menu-bar__menu-box-1 > ol {
+          text-align: center;
+        }
+
+        .logo-bar > div {
+          text-align: center;
+        }
+
+        .logo-bar > div > .logo-bar__logo {
+          font-size: 3rem;
+        }
+
+        .menu-bar__menu-box-1 > ol > li > a {
+          display: block;
+          font-size: 1.5rem;
+          padding: 10px 20px;
+        }
+      
+        h1 {
+          border-bottom: none;
+        }  
+      }
+    </style>
+</head>
+<body style="background-color: black; color: white;">
+  <header>
+    <h1 class="logo-bar con-min-width">
+      <div class="text-align-center con">
+        <a href="index.html" class="logo-bar__logo" id="HO">
+          <span>
+            HOME
+          </span>
+        </a>
+      </div>
+    </h1>
+    <h2 class="menu-bar con-min-width">
+      <div class="con">
+        <nav class="menu-bar__menu-box-1 text-align-center">
+          <ol class="inline-grid">
+            <li><a href="1.html" id="MK">마크다운</a></li>
+            <li><a href="2.html" id="SP">Spring</a></li>
+            <li><a href="3.html" id="MS">MySQL</a></li>
+            <li><a href="4.html" id="JP">JPA</a></li>
+          </ol>
+        </nav>
+      </div>
+    </h2>
+      <div>
+        <h2>스프링 프레임워크란?</h2>
+        <img style="animation: moveRightAndBack; animation-duration: 2s; animation-iteration-count: infinite;" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Spring_Framework_Logo_2018.svg/400px-Spring_Framework_Logo_2018.svg.png" alt="spring image" width="30%"/>
+        
+        <br>          
+        
+        <p style="animation: fadeIn 2s;">
+          스프링 프레임워크(영어: Spring Framework)는 자바 플랫폼을 위한 오픈 소스 애플리케이션 프레임워크로서 간단히 스프링(Spring)이라고도 한다. 동적인 웹 사이트를 개발하기 위한 여러 가지 서비스를 제공하고 있다. 대한민국 공공기관의 웹 서비스 개발 시 사용을 권장하고 있는 전자정부 표준프레임워크의 기반 기술로 쓰이고 있다.
+        </p>
+        
+        <p style="animation: fadeIn 4s;">
+          로드 존슨이 2002년에 출판한 자신의 저서인 Expert One-on-One J2EE Design and Development 에 선보인 코드를 기반으로 시작하여 점점 발전하게 되었다. 이 프레임워크는 2003년 6월에 최초로 아파치 2.0 라이선스로 공개되었으며 주요 버전 이력은 다음과 같다.
+        </p>
+        
+        <p>
+            <ul class="listFade">
+              <li>1.0 : 2004년 3월</li>
+              <li>2.0 : 2006년 10월</li>
+              <li>2.5 : 2007년 11월</li>
+              <li>3.0 : 2009년 12월</li>
+              <li>3.1 : 2011년 12월</li>
+              <li>4.0 : 2013년 12월</li>
+              <li>5.0 : 2017년 9월</li>
+              <li>6.0 : 2022년 11월</li>
+            </ul>
+        </p>
+        
+        <br>
+        
+        <p>
+          <dl>
+            <dt><h2 style="margin-left: 7%; animation: fadeIn 4s;">특징</h2></dt>
+            <dd>
+              <ul class="listFade">
+                <li>경량 컨테이너로서 자바 객체를 직접 관리한다. 각각의 객체 생성, 소멸과 같은 라이프 사이클을 관리하며 스프링으로부터 필요한 객체를 얻어올 수 있다.</li>
+                <li>스프링은 Plain Old Java Object 방식의 프레임워크이다. 일반적인 J2EE 프레임워크에 비해 구현을 위해 특정한 인터페이스를 구현하거나 상속을 받을 필요가 없어 기존에 존재하는 라이브러리 등을 지원하기에 용이하고 객체가 가볍다.</li>
+                <li>스프링은 제어 반전(IoC : Inversion of Control)을 지원한다. 컨트롤의 제어권이 사용자가 아니라 프레임워크에 있어서 필요에 따라 스프링에서 사용자의 코드를 호출한다.</li>
+                <li>스프링은 의존성 주입(DI : Dependency Injection)을 지원한다. 각각의 계층이나 서비스들 간에 의존성이 존재할 경우 프레임워크가 서로 연결시켜준다.</li>
+                <li>스프링은 관점 지향 프로그래밍(AOP : Aspect-Oriented Programming)을 지원한다. 따라서 트랜잭션이나 로깅, 보안과 같이 여러 모듈에서 공통적으로 사용하는 기능의 경우 해당 기능을 분리하여 관리할 수 있다.</li>
+                <li>스프링은 영속성과 관련된 다양한 서비스를 지원한다. iBATIS나 하이버네이트 등 이미 완성도가 높은 데이터베이스 처리 라이브러리와 연결할 수 있는 인터페이스를 제공한다.</li>
+                <li>스프링은 확장성이 높다. 스프링 프레임워크에 통합하기 위해 간단하게 기존 라이브러리를 감싸는 정도로 스프링에서 사용이 가능하기 때문에 수많은 라이브러리가 이미 스프링에서 지원되고 있고 스프링에서 사용되는 라이브러리를 별도로 분리하기도 용이하다.</li>
+              </ul>
+            </dd>
+          </dl>
+        </p>
+      </div>
+    </div>
+  </body>
+</html>
