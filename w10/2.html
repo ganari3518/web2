@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>WEB</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body style="background-color: black; color: white;">
+  <h1><a href="index.html">WEB</a></h1>
+  <div id="grid">
+    <div id="side-bar">
+      <ol>
+        <li><a href="1.html">HTML</a></li>
+        <li><a href="2.html">CSS</a></li>
+        <li><a href="3.html">JavaScript</a></li>
+      </ol>
+      <div onmouseover="mouseOverFunction()" style="background: green; height: 100px; width: 100px; margin-top: 30px;">
+        <span id="mouse_text" style="align-items: center;"></span>
+      </div>
+      <input id="resetbtn" type="button" value="clean" style="width: 50px; text-align: center;" onclick="mouseOverReset()"/>
+      <script>
+        var result = 0;
+        function mouseOverFunction(){
+          document.getElementById('mouse_text').innerHTML = result += 1;
+        }
+        function mouseOverReset(){
+          result = 0;
+          document.getElementById('mouse_text').innerHTML = result;
+        }
+      </script>
+    </div>
+    <div>
+      <input id="night_day1" type="button" value="day" onclick="
+        var target = document.querySelector('body');
+        if(this.value == 'day'){
+          this.value = 'night';
+          target.style.backgroundColor = 'white';
+          target.style.color = 'black';
+        } else{
+          this.value = 'day';
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+        }
+        document.querySelector('#night_day2').value = this.value;
+        document.querySelector('#f_color').value = 'font-color';
+      "/>
+      <input type="button" value="night" onclick="
+        document.querySelector('body').style.backgroundColor = 'black';
+        document.querySelector('body').style.color = 'white';
+        document.querySelector('#f_color').value = 'font-color';
+        document.querySelector('#night_day1').value = 'day';
+        document.querySelector('#night_day2').value = 'day';
+      "/>
+      <input type="button" value="day" onclick="
+        document.querySelector('body').style.backgroundColor = 'white';
+        document.querySelector('body').style.color = 'black';
+        document.querySelector('#f_color').value = 'font-color';
+        document.querySelector('#night_day1').value = 'night';
+        document.querySelector('#night_day2').value = 'night';
+      "/>
+      <input type="button" value="big" onclick="
+        var f_size = document.querySelector('body').style.fontSize;
+        if(f_size == '') f_size = '16px';
+        document.querySelector('body').style.fontSize = parseInt(f_size) + 16 + 'px';
+      "/>
+      <input type="button" value="small" onclick="
+      var f_size = document.querySelector('body').style.fontSize;
+      if(parseInt(f_size) <= 16){
+        return;
+      } else{
+        document.querySelector('body').style.fontSize = parseInt(f_size) - 16 + 'px';
+      }"/>
+      <input type="button" value="font-family" onclick="
+        var f_family = document.querySelector('body').style.fontFamily;
+        if(f_family == ''){
+          document.querySelector('body').style.fontFamily = 'Arial';
+          this.value = 'Arial';
+        }
+        if(f_family == 'Arial'){
+          document.querySelector('body').style.fontFamily = 'Courier';
+          this.value = 'Courier';
+        } else if(f_family == 'Courier'){
+          document.querySelector('body').style.fontFamily = 'Verdana';
+          this.value = 'Verdana';
+        } else if(f_family == 'Verdana'){
+          document.querySelector('body').style.fontFamily = '';
+          this.value = 'font-family';
+        }"/>
+      <input type="button" value="border-on" onclick="
+        const array = document.querySelectorAll('*')
+        for(let i = 0; i < array.length; i++){
+          if(array[i].style.border == ''){
+            array[i].style.border = '5px solid aqua';
+            this.value = 'border-off';
+          } else{
+            array[i].style.border = '';
+            this.value = 'border-on';
+          }
+        }"/>
+      <input id="f_color" type="button" value="font-color" onclick="
+        var f_color = document.querySelector('body')
+        if(f_color.style.color == ''){
+          f_color.style.color = 'aqua';
+          this.value = 'aqua';
+        } else if(f_color.style.color == 'aqua'){
+          if(f_color.style.backgroundColor == 'black'){
+            f_color.style.color = 'white';
+          } else{
+            f_color.style.color = 'black';
+          }
+          this.value = 'font-color';
+        } else if(f_color.style.color == 'black' || f_color.style.color == 'white'){
+          f_color.style.color = 'aqua';
+          this.value = 'aqua';
+      }"/>
+
+      <h2>CSS</h2>
+      <img src="https://images.unsplash.com/photo-1523437113738-bbd3cc89fb19?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2671&q=80" width="30%">
+      <p>Cascading Style Sheets (CSS) is a style sheet language used for describing the presentation of a document written in a markup language such as HTML or XML (including XML dialects such as SVG, MathML or XHTML).[1] CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.[2]</p>
+      <p>CSS is designed to enable the separation of content and presentation, including layout, colors, and fonts.[3] This separation can improve content accessibility; provide more flexibility and control in the specification of presentation characteristics; enable multiple web pages to share formatting by specifying the relevant CSS in a separate .css file, which reduces complexity and repetition in the structural content; and enable the .css file to be cached to improve the page load speed between the pages that share the file and its formatting.</p>
+
+      <input id="night_day2" type="button" value="day" onclick="
+        var target = document.querySelector('body');
+        if(this.value == 'day'){
+          this.value = 'night';
+          target.style.backgroundColor = 'white';
+          target.style.color = 'black';
+        } else{
+          this.value = 'day';
+          target.style.backgroundColor = 'black';
+          target.style.color = 'white';
+        }
+        document.querySelector('#night_day1').value = this.value
+        document.querySelector('#f_color').value = 'font-color';
+      "/>
+    </div>
+  </div>
+</body>
+
+</html>
