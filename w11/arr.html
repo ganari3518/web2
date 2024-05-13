@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>
+        영화
+    </h1>
+    <h2>
+        장르
+    </h2>
+    <h3>
+        액션
+    </h3>
+    <script>
+        var movie = ['범죄도시', '혹성탈출', '독전', '공조', '아이언맨', '어벤져스', '트랜스포머', '킹스맨', '미션임파서블', '데드풀'];
+        var img =  ['https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcQprZFHUzORH1V2j21GJQFQRxRQEBFyzWv_263uCPU7WfqeGzm0',
+        'https://upload.wikimedia.org/wikipedia/ko/2/25/혹성탈출_종의_전쟁.jpg',
+        'https://img.movist.com/?img=/x00/05/07/22_p1.jpg',
+        'https://upload.wikimedia.org/wikipedia/ko/c/c1/영화_공조.jpg',
+        'https://i.namu.wiki/i/lU8jO3Yx4iI9DqOR-9J1NzLn4t7AD6lOYBzG0Eec6USnZIaAaIHKp6mN0nyFpT3Jl1KMeL2HPY8BgIBMiv8nqfQ3JqjyqwV0qobD2_7CcXRIzQ_vdSehOcjsjhnhk_E2ERhlTkPcx4fhRMWjhLbppg.webp',
+        'https://i.namu.wiki/i/4TQ43oRpSutILa27dC-fB90UFy90BV5eX1wCoxjergV-kbJFoSPG4gQKegrx83wllywL10AQKk5VsJ2fLBcUlTqPP1zti-SAi4Z3BmS9TkDK6jM5Dx9wts5sDMpa6jnM0TeiAoQ_p9r3Ls5-8He6mg.webp',
+        'https://i.namu.wiki/i/Y3nz3fjx0jqP8e6hIhcwoWTG4P219LsQF3Bgj9aUbsmLSNFPxIjrFap47kwQbDGQlHQ4kGScVm7rURQuT60L6HSehxhemuwcTHENF-staLhXzsUTSs7Qj9jhZ1dYUyd46B8jexi7JK9z_aztI5ZZ1g.webp',
+        'https://upload.wikimedia.org/wikipedia/ko/2/2a/킹스맨.jpg',
+        'https://i.namu.wiki/i/b7oqHFHE1xZbgCtejCQAe2vFf-wRgJTIiiesa3r6UaY65WGTlIqWvtbNmtr91KifP3D-G2q1pnnBEwJgI9wu3edUEewWGlKHGUVOrD9E8v_8uGOPvDBNphxcBemt6VYgP0LfemzF8PTSMKH7KhDnGw.webp',
+        'https://i.namu.wiki/i/ytUijlgFWISYGRJJvqbA-65G1wTflDeo_HtUIGptN0pHasGhL1m8tkVcrvjNROTXzJb1Q0BK5zgunjPdJ8HJLJ5njlNVt0892h31oniGUnEsBQN1Lf58dUqmqwzBP5tbDePsqYBT7HA2f5CLC1m2Tw.webp'
+        ];
+        var url = ['https://www.youtube.com/watch?v=pMAPj6WVsT4',
+        'https://www.youtube.com/watch?v=jTgNhvNhcP4',
+        'https://www.youtube.com/watch?v=8asOmw3UnMw',
+        'https://www.youtube.com/watch?v=g4qQXXtaMqc',
+        'https://www.youtube.com/watch?v=eAm72ev8aMQ',
+        'https://www.youtube.com/watch?v=Ko2NWhXI9e8',
+        'https://www.youtube.com/watch?v=7MjKspiRQ-g',
+        'https://www.youtube.com/watch?v=CFZdV5o8WTU',
+        'https://www.youtube.com/watch?v=al8wg6zcBJQ',
+        'https://www.youtube.com/watch?v=AubJhjH0MfY'
+        ];
+        var i = 0;
+        while(i < movie.length){
+            document.write('<li><a href="' + url[i] + '">' + movie[i] + '</a></li>');
+            document.write('<img src="' + img[i] + '" width="30%">');
+            i = i + 1;
+        }
+    </script>
+</body>
+</html>
