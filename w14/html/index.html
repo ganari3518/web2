@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Home</title>
+  
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+<link rel="stylesheet" href="./css/style.css">
+<script src="https://cdn.tailwindcss.com"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<style>
+	input:checked ~ .dot {
+		transform: translateX(100%);
+	}
+</style>
+
+</head>
+<body>
+<fieldset class="checkbox-group">
+	<legend class="checkbox-group-legend"></legend>
+	<div class="checkbox">
+		<label class="checkbox-wrapper">
+			<input type="button" class="checkbox-input" onclick="discordButton()"/>
+			<span class="checkbox-tile">
+				<span class="checkbox-icon">
+					<img src="./images/discord.png" width="45px" height="45px"/>
+				</span>
+				<span class="checkbox-label">Discord</span>
+			</span>
+		</label>
+	</div>
+	<div class="checkbox">
+		<label class="checkbox-wrapper">
+			<input type="button" class="checkbox-input" onclick="gitHubButton()"/>
+			<span class="checkbox-tile">
+				<span class="checkbox-icon">
+					<img src="./images/github.png" width="45px" height="45px"/>
+				</span>
+				<span class="checkbox-label">GitHub</span>
+			</span>
+		</label>
+	</div>
+	<div class="checkbox">
+		<label class="checkbox-wrapper">
+			<input type="button" class="checkbox-input" onclick="docsButton()"/>
+			<span class="checkbox-tile">
+				<span class="checkbox-icon">
+					<img src="./images/docs.png" width="40px" height="45px"/>
+				</span>
+				<span class="checkbox-label">Docs</span>
+			</span>
+		</label>
+	</div>
+	<div class="checkbox">
+		<label class="checkbox-wrapper">
+			<input type="button" class="checkbox-input" onclick="stockButton()"/>
+			<span class="checkbox-tile">
+				<span class="checkbox-icon">
+					<img src="./images/stock.png" width="45px" height="45px"/>
+				</span>
+				<span class="checkbox-label">Stock</span>
+			</span>
+		</label>
+	</div>
+
+	<label tabindex="0" class="flex items-center relative w-max cursor-pointer !mb-0">
+		<input type="checkbox" tabindex="-1" id="change_unit_helper" name="change_unit_helper" class="custom-toggle-box peer appearance-none transition-colors cursor-pointer w-[65px] h-[36px] rounded-full !mt-0 focus:outline-none bg-[#d9d9d9] checked:!bg-[#2260ff]">
+		<span class="absolute flex justify-center items-center w-[28px] h-[28px] left-[4px] rounded-full peer-checked:translate-x-[29px] transform transition-transform bg-[#fff]"></span>
+	</label>
+	
+</fieldset>
+<script  src="./js/script.js"></script>
+</body>
+</html>
