@@ -29,13 +29,9 @@ var Body = {
       if ($(this).is(":checked")) {
         Body.setBackgroundColor('black');
         Body.setColor('white');
-        NightDayButton.setValue('day');
-        Links.setColor('powderblue');
       } else {
         Body.setBackgroundColor('white');
         Body.setColor('black');
-        NightDayButton.setValue('night');
-        Links.setColor('blue');
       }
     });
   });
